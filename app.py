@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-# De här importerar flask classen och rende_template functionen från flask modulen. 
+# De här importerar flask classen och render_template functionen från flask modulen. 
 
 import sqlite3
 #Den här importerar sqlite3 modulen. Som tillhanderar python interface till sqlite database engine.
