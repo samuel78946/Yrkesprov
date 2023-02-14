@@ -5,7 +5,7 @@ import sqlite3
 #Den här importerar sqlite3 modulen. Som tillhanderar python interface till sqlite database engine.
 
 app = Flask(__name__)
-#Den här coden tillelar flask till variebeln 'app'
+#Den här coden tilldelar flask till variebeln 'app'
 
 sql = "SELECT \
             kustannus_name,\
