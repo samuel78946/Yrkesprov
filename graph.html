@@ -5,12 +5,19 @@
 
     <title>Chart</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+	#Inkluderar Chart.js-biblioteket, det ger funktionen att skapa ett diagram.
+	
 </head>
 <body>
     <canvas id="lineChart" width="800" height="400"></canvas>
+	
+	
     <script>
         var ctx = document.getElementById("lineChart").getContext("2d");
+	    #'Tilldelar canvas till varabeln ctx
+	    
         var lineChart = new Chart(ctx, {
+		# "Den här gör en ny object 
             type: "doughnut",
             data: {
                 labels: {{ labels | safe }},
@@ -18,7 +25,9 @@
                     {
                         label: "Data points",
                         data: {{ values | safe }},
-                        fill: true,
+			## 'safe filter indikerar att innehållet är säkert att visa utan ytterligare prosessering 
+                       
+	    		fill: true,
 			backgroundColor:['#deadbeef','#c0ffee','#fffc33','#ff0000','#0fff00'],
                      	borderColor: 'rgb(75, 191, 191)'
                       	//lineTension: 0.1
